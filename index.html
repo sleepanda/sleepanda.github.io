@@ -16,7 +16,7 @@
     <meta property="og:image" content="undefined"/>
   
 
-  <link href="/favicon.png" rel="icon">
+  <link href="/favicon.ico" rel="icon">
   <link rel="alternate" href="/atom.xml" title="Sleepanda Studio" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -35,33 +35,51 @@
 
 </head>
 
-
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Sleepanda Studio</a></h1>
-  <h2><a href="/"></a></h2>
+  <header id="header" class='normal_mode'>
+    <div class='profile'>
+  <h1><a href="/"><img class="logo" src="/css/img/logo.png"/></a></h1>
+  <h2>
+  	<a href="/">
+  	Sleepanda Studio
+  	
+  	</a>
+  </h2>
 </div>
-<nav id="main-nav" class="alignright">
-  <ul>
+<nav id="main-nav">
+  <ul class='inner'>
     
-      <li><a href="/">Home</a></li>
+      <li><a href="/">博客</a></li>
     
-      <li><a href="/archives">Archives</a></li>
+      <li><a href="/archives">存档</a></li>
+    
+      <li><a href="/works">作品</a></li>
+    
+      <li><a href="/about">关于</a></li>
     
   </ul>
   <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
+<div class="clearfix"></div>
+  </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
+    <div id="main-col"><div id="wrapper">
   <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-04-21T05:15:30.000Z"><a href="/2014/04/21/why-blog/">Apr 21 2014</a></time>
-      
       
   
     <h1 class="title"><a href="/2014/04/21/why-blog/">why blog</a></h1>
@@ -75,7 +93,15 @@
     </div>
     <footer>
       
+        <div class="alignleft">
+            <a href="/2014/04/21/why-blog/#more" class="more-link">Read More</a>
+        </div>
         
+        
+          <div class="alignleft"> 
+            <span class="ds-thread-count" data-thread-key="/2014/04/21/why-blog/">&nbsp;
+            </span>
+          </div>
         
       
       <div class="clearfix"></div>
@@ -86,14 +112,24 @@
 
 
 
+
+
   <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header>
-      
-        <div class="icon"></div>
-        <time datetime="2014-04-21T04:45:28.000Z"><a href="/2014/04/21/hello-world/">Apr 21 2014</a></time>
-      
       
   
     <h1 class="title"><a href="/2014/04/21/hello-world/">Hello World</a></h1>
@@ -108,7 +144,15 @@
     </div>
     <footer>
       
+        <div class="alignleft">
+            <a href="/2014/04/21/hello-world/#more" class="more-link">Read More</a>
+        </div>
         
+        
+          <div class="alignleft"> 
+            <span class="ds-thread-count" data-thread-key="/2014/04/21/hello-world/">&nbsp;
+            </span>
+          </div>
         
       
       <div class="clearfix"></div>
@@ -120,12 +164,15 @@
 
 
 
+
+
 <nav id="pagination">
   
   
   <div class="clearfix"></div>
 </nav></div></div>
-    <aside id="sidebar" class="alignright">
+    <!--
+    <aside id="sidebar" class="alignright" style="display:none">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
     <input type="search" name="q" results="0" placeholder="Search">
@@ -137,13 +184,20 @@
 
   
 </aside>
+    
+    -->
     <div class="clearfix"></div>
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
   &copy; 2014 Roy.C
   
+  
+    <a class="icon" href="https://github.com/sleepanda">github</a>
+    <a href="http://weibo.com/roymind">weibo</a>
+  
 </div>
+
 <div class="clearfix"></div></footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="/js/jquery.imagesloaded.min.js"></script>
@@ -152,13 +206,69 @@
 
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript">
+        (function(){
+
+            $(window).scroll(function(){
+
+                var scrollTop = $(window).scrollTop();
+                if ( scrollTop >200 ){
+                    $("#main-nav").removeClass('normal_mode').addClass('top_mode');
+                } else{
+                    $("#main-nav").removeClass('top_mode').addClass('normal_mode');
+                }
+
+            });
+
+        })();
+    </script>
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript">
+  (function($){
+    $('.fancybox').fancybox();
+  })(jQuery);
+  </script>
+
+
+
+    
+    <script type="text/javascript">
+      var duoshuoQuery = {short_name:"sleepanda"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+
+
 <script type="text/javascript">
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
+  
+  $(function(){
+
+    $('.title').hover(
+      function() {      
+        $(this).stop().animate(
+          {'marginLeft': '10px'}, 200
+        );   
+      }, 
+      function() {       
+        $(this).stop().animate({'marginLeft': '0px'}, 200);      
+      
+    });   
+
+  });
+
 </script>
+
 
 </body>
 </html>
