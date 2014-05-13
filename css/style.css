@@ -24,6 +24,11 @@ viewport {
   width: device-width;
 }
 body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background: #fff;
   color: #444;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -59,9 +64,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-p {
-  text-indent: 2em;
-}
 .alignleft {
   float: left;
 }
@@ -80,8 +82,10 @@ p {
   clear: both;
 }
 .inner {
-  width: 800px;
+  width: 90%;
+  padding: 0 5%;
   margin: 0 auto;
+  max-width: 900px;
 }
 #main-col {
   margin-top: 60px;
@@ -100,7 +104,8 @@ p {
 }
 #wrapper {
   margin: 0 auto;
-  width: 700px;
+  padding: 0 5%;
+  width: 90%;
 }
 #sidebar {
   margin-top: 60px;
@@ -111,9 +116,9 @@ p {
 }
 #header .profile {
   background: #f9f9f9;
-  height: 180px;
+  height: 140px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 #header .profile .logo {
   width: 298px;
@@ -161,12 +166,12 @@ p {
 #header #main-nav ul li {
   display: inline-block;
   padding: 3px 0px;
-  width: 24%;
+  width: 32%;
   text-align: center;
 }
 #header #main-nav ul li a {
   color: #333;
-  font-size: 16px;
+  font-size: 22px;
 }
 article {
   margin-bottom: 60px;
@@ -710,6 +715,7 @@ article footer .addthis iframe {
   display: inline-block;
 }
 #footer {
+  padding: 0 8%;
   color: #999;
   margin-bottom: 50px;
   font: 0.9em/1.6 "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
