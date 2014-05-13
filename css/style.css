@@ -8,6 +8,21 @@
   margin: 0;
   padding: 0;
 }
+-webkit-viewport {
+  width: device-width;
+}
+-moz-viewport {
+  width: device-width;
+}
+-ms-viewport {
+  width: device-width;
+}
+-o-viewport {
+  width: device-width;
+}
+viewport {
+  width: device-width;
+}
 body {
   background: #fff;
   color: #444;
